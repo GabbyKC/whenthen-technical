@@ -1,0 +1,42 @@
+/*Fonts - imported as needed*/
+@font-face {
+    font-family: 'Helvetica Now Display';
+    src: url('../fonts/Helvetica/Monotype - Helvetica Now Display.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Now Display';
+    src: url('../fonts/Helvetica/Monotype - Helvetica Now Display Bold.otf');
+    font-weight: 700;
+}
+
+/*Resets*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Helvetica Now Display', sans-serif;
+    font-weight: normal;
+    max-width: 1440px;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/*Variables */
+
+/*Utilities */
+.wrapper {
+    width: 80%;
+    margin: auto;
+}

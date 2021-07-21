@@ -1,1 +1,1 @@
-# whenthen-technical
+# WhenThen Technical Task
