@@ -51,7 +51,8 @@ $('.first-section__carousel').slick({
                 breakpoint: 700,
                 settings: {
                     arrows: false,
-                    centerMode: false
+                    centerMode: false,
+                    speed: 100
                 }
             }
         ]
