@@ -58,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .headings-large {
     line-height: 73px;
+    font-size: 72px;
 }
 
 .h4 {
@@ -145,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     overflow: auto;
     background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(227, 227, 227, .8) /* Black w/ opacity */
+    background-color: rgba(227, 227, 227, .8)
 }
 
 .header__modal__container {
@@ -274,10 +275,6 @@ h1, h2, h3, h4, h5, h6 {
     --animate-duration: 1.5s;
 }
 
-.first-section h2 {
-    font-size: 72px;
-}
-
 .first-section h4 {
     width: 40%;
 }
@@ -321,7 +318,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .second-section h2 {
-    font-size: 73px;
     margin-bottom: 20px;
 }
 
@@ -365,30 +361,38 @@ footer a {
     }
 
     .hero-section {
-        margin-bottom: 4rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
 
     .hero-section__image {
+        margin-top: 3rem;
         height: 400px;
         background-position: center;
     }
 
-    .hero-section__future-button {
+    .hero-section__future-button,  .hero-section__overlay {
         display: none;
     }
 
-    .hero-section__overlay {
-        display: none;
+    .first-section__carousel__container {
+        margin: 3rem 0 116px;
+        width: 100%;
     }
 }
 
 @media (min-width: 700px) and (max-width: 900px) {
+    .hero-section {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
     .hero-section__overlay {
-        left: 26%;
+        left: 25%;
     }
 }
 
-@media (min-width: 700px) and (max-width: 1100px) {
+@media (min-width: 700px) and (max-width: 1250px) {
     .hero-section__image {
         background-position: center;
     }
@@ -396,6 +400,10 @@ footer a {
     .hero-section__overlay {
         background-image: url("../images/hero_overlay_small.png");
         width: 400px;
+    }
+
+    .first-section__carousel__container {
+        width: 80%;
     }
 }
 
@@ -406,7 +414,7 @@ footer a {
         align-items: unset;
     }
 
-    .hero-section h1 {
+    .hero-section h1, .second-section__right h2 {
         margin-bottom: 2rem;
         font-size: 3.75rem;
         line-height: 3.75rem;
@@ -418,10 +426,6 @@ footer a {
 
     .hero-section h4, .first-section h4 {
         width: 100%;
-    }
-
-    .first-section__carousel__container {
-        width: 80%;
     }
 
     .second-section__right {

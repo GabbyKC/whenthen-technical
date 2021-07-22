@@ -1,20 +1,20 @@
-const modal = document.getElementById("navModal");
-const btn = document.getElementById("navButton");
-const span = document.getElementsByClassName("header__modal__close")[0];
+const navModal = document.getElementById("navModal");
+const navOpen = document.getElementById("navButton");
+const navClose = document.getElementsByClassName("header__modal__close")[0];
 // When the user clicks the button, open the modal
-btn.onclick = function () {
-    modal.style.display = "block";
+navOpen.onclick = function () {
+    navModal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
+navClose.onclick = function () {
+    navModal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
+    if (event.target === navModal) {
+        navModal.style.display = "none";
     }
 }
 
@@ -25,18 +25,18 @@ const heroOverlay = document.getElementById("heroOverlay")
 
 futureButton.onclick = function () {
     heroOverlay.classList.remove('animate__fadeOut');
-    heroOverlay.style.visibility = "visible";
     heroImage.classList.remove("blur-out");
     heroImage.classList.add("blur");
+    heroOverlay.style.visibility = "visible";
     heroOverlay.classList.add('animate__fadeIn');
 }
 
 heroOverlay.onclick = function () {
-    heroImage.classList.remove("blur");
-    heroImage.classList.add("blur-out");
-    heroOverlay.classList.remove('animate__fadeIn');
     heroOverlay.classList.add('animate__fadeOut');
+    heroImage.classList.add("blur-out");
     heroOverlay.style.visibility = "hidden";
+    heroImage.classList.remove("blur");
+    heroOverlay.classList.remove('animate__fadeIn');
 }
 
 // Carousel - Slick
