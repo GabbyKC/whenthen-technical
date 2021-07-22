@@ -17,3 +17,24 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+// Hero section
+const futureButton = document.getElementById("futureButton");
+const heroImage = document.getElementById("heroImage")
+const heroOverlay = document.getElementById("heroOverlay")
+
+futureButton.onclick = function () {
+    heroOverlay.classList.remove('animate__fadeOut');
+    heroOverlay.style.visibility = "visible";
+    heroImage.classList.remove("blur-out");
+    heroImage.classList.add("blur");
+    heroOverlay.classList.add('animate__fadeIn');
+}
+
+heroOverlay.onclick = function () {
+    heroImage.classList.remove("blur");
+    heroImage.classList.add("blur-out");
+    heroOverlay.classList.remove('animate__fadeIn');
+    heroOverlay.classList.add('animate__fadeOut');
+    heroOverlay.style.visibility = "hidden";
+}
