@@ -2,17 +2,17 @@ const modal = document.getElementById("navModal");
 const btn = document.getElementById("navButton");
 const span = document.getElementsByClassName("header__modal__close")[0];
 // When the user clicks the button, open the modal
-btn.onclick = function() {
+btn.onclick = function () {
     modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target === modal) {
         modal.style.display = "none";
     }
@@ -38,3 +38,22 @@ heroOverlay.onclick = function () {
     heroOverlay.classList.add('animate__fadeOut');
     heroOverlay.style.visibility = "hidden";
 }
+
+// Carousel - Slick
+$('.first-section__carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 700,
+                settings: {
+                    arrows: false,
+                    centerMode: false
+                }
+            }
+        ]
+    }
+);

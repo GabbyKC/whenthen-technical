@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     overflow: auto;
     background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(227, 227, 227, 1) /* Black w/ opacity */
+    background-color: rgba(227, 227, 227, .8) /* Black w/ opacity */
 }
 
 .header__modal__container {
@@ -266,6 +266,35 @@ h1, h2, h3, h4, h5, h6 {
     width: 40%;
 }
 
+.first-section__carousel__container {
+    width: 90%;
+    margin: 160px auto 0;
+}
+
+.first-section__carousel img {
+    max-width: 100%;
+}
+
+.slick-slide {
+    margin: 0 15px;
+}
+
+.slick-next:before, .slick-prev:before {
+    color: var(--primary-text)!important;
+    font-size: 30px!important;
+}
+
+.slick-prev {
+    left: -45px!important;
+}
+
+.slick-next {
+    right: -35px!important;
+}
+
+.slick-dots {
+    bottom: -40px!important;
+}
 
 /*Media Queries*/
 @media (max-width: 700px) {
@@ -332,5 +361,9 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero-section h4, .first-section h4 {
         width: 100%;
+    }
+
+    .first-section__carousel__container {
+        width: 80%;
     }
 }
