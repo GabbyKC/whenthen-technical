@@ -75,11 +75,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blur-out {
-    filter: opacity(1);    transition: .7s filter linear;
+    filter: opacity(1);
+    transition: .7s filter linear;
     -webkit-transition: .7s -webkit-filter linear;
     -moz-transition: .7s -moz-filter linear;
     -ms-transition: .7s -ms-filter linear;
     -o-transition: .7s -o-filter linear;
+}
+
+.custom-underline {
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.custom-underline:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--primary-text);
+    bottom: -20px;
+    left: 0;
 }
 
 /*Styles */
@@ -268,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .first-section__carousel__container {
     width: 90%;
-    margin: 160px auto 0;
+    margin: 160px auto 116px;
 }
 
 .first-section__carousel img {
@@ -280,20 +296,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slick-next:before, .slick-prev:before {
-    color: var(--primary-text)!important;
-    font-size: 30px!important;
+    color: var(--primary-text) !important;
+    font-size: 30px !important;
 }
 
 .slick-prev {
-    left: -45px!important;
+    left: -45px !important;
 }
 
 .slick-next {
-    right: -35px!important;
+    right: -35px !important;
 }
 
 .slick-dots {
-    bottom: -40px!important;
+    bottom: -50px !important;
+}
+
+.second-section {
+    margin-bottom: 143px;
+}
+
+.second-section p {
+    line-height: 29px;
+}
+
+.second-section h2 {
+    font-size: 73px;
+    margin-bottom: 20px;
+}
+
+.second-section__left {
+    flex-basis: 36%;
+}
+
+.second-section__left h4 {
+    margin-bottom: 8px;
+}
+
+.second-section__right {
+    flex-basis: 40%;
+}
+
+footer {
+    padding: 2rem 0;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    background: var(--primary-text);
+    color: var(--text-inverse);
+}
+
+footer a {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    color: #0acfc8;
+    font-weight: bold;
 }
 
 /*Media Queries*/
@@ -344,7 +401,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 @media (max-width: 1250px) {
-    section .flex-between-center {
+    section .flex-between-center, section.flex-between-center {
         flex-direction: column;
         align-items: unset;
     }
@@ -365,5 +422,9 @@ h1, h2, h3, h4, h5, h6 {
 
     .first-section__carousel__container {
         width: 80%;
+    }
+
+    .second-section__right {
+        margin-top: 4rem;
     }
 }
