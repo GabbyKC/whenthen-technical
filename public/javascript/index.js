@@ -52,7 +52,6 @@ $('.first-section__carousel').slick({
                 settings: {
                     arrows: false,
                     centerMode: false,
-                    speed: 100
                 }
             }
         ]
